@@ -1,18 +1,23 @@
 import React from 'react'
+import NavbarLinks from './NavbarLinks'
+
+const links = [
+  { name: 'home', scrollToName: 'home' },
+  { name: 'about', scrollToName: 'about' },
+  { name: 'contact', scrollToName: 'contact' },
+]
 
 const Navbar = () => {
   return (
     <nav className='bg-slate-500 w-full fixed'>
       <ul className='list-none flex text-white container mx-auto h-24 p-6 justify-center items-center '>
-        <li className='p-3 text-xl text-bold cursor-pointer hover:text-pink-300 transition duration-300 hover:text-2xl'>
-          Home
-        </li>
-        <li className='p-3 text-xl text-bold cursor-pointer hover:text-pink-300 transition duration-300 hover:text-2xl'>
-          About
-        </li>
-        <li className='p-3 text-xl text-bold cursor-pointer hover:text-pink-300 transition duration-300 hover:text-2xl'>
-          Contact
-        </li>
+        {links.map((link) => (
+          <NavbarLinks
+            key={link.name}
+            name={link.name}
+            scrollToName={link.scrollToName}
+          />
+        ))}
       </ul>
     </nav>
   )

@@ -11,7 +11,7 @@ export const useOnScreen = (ref) => {
     return () => {
       observer.disconnect()
     }
-  })
+  }, [ref])
 
   return isOnScreen
 }

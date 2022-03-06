@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { NavContext } from '../context/NavContext'
 
-const NavbarLinks = ({ name }) => {
+const NavbarLink = ({ name }) => {
   const { activeLink, setActiveLink } = useContext(NavContext)
 
   const handleClick = () => {
@@ -23,4 +23,4 @@ const NavbarLinks = ({ name }) => {
   )
 }
 
-export default NavbarLinks
+export default NavbarLink

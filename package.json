@@ -1,4 +1,5 @@
 {
+  "homepage": "https://j45t7.github.io/one-page-scroll/",
   "name": "one-page-scroll",
   "version": "0.1.0",
   "private": true,
@@ -12,6 +13,8 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

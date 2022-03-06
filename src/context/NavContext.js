@@ -5,14 +5,12 @@ export const NavContext = createContext()
 const NavProvider = ({ children }) => {
   const [activeLink, setActiveLink] = useState('')
 
-  const providerValue = {
+  const value = {
     activeLink,
     setActiveLink,
   }
 
-  return (
-    <NavContext.Provider value={providerValue}>{children}</NavContext.Provider>
-  )
+  return <NavContext.Provider value={value}>{children}</NavContext.Provider>
 }
 
 export default NavProvider

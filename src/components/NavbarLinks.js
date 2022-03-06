@@ -1,12 +1,12 @@
 import React, { useContext } from 'react'
 import { NavContext } from '../context/NavContext'
 
-const NavbarLinks = ({ name, scrollToName }) => {
+const NavbarLinks = ({ name }) => {
   const { activeLink, setActiveLink } = useContext(NavContext)
 
   const handleClick = () => {
     setActiveLink(name)
-    document.getElementById(scrollToName).scrollIntoView({ behavior: 'smooth' })
+    document.getElementById(name).scrollIntoView({ behavior: 'smooth' })
   }
 
   return (
